@@ -20,5 +20,5 @@ juju-log "started"
 # https://github.com/logstash/logstash/wiki/Elasticsearch-Storage-Optimization
 # really we should do this as part of the relationship join.
 juju-log "sleep 10 seconds then install logstash template"
-sleep 10s
+sleep 60
 curl -XPUT 'http://localhost:9200/_template/template_logstash/' -d @${HOME}/../files/charm/logstash-template.json
